@@ -1,18 +1,16 @@
 language: c 
-script: ./configure --prefix=/home/travis/shalture $CONFIGURE_WITH && make && make install
+script: ./configure --prefix=/home/travis/shalture --disbale-nls --enable-ssl $CONFIGURE_WITH && make && make install
 compiler:
   - gcc
   - clang 
 matrix:
   fast_finish: true
   allow_failures:
-    - env: CONFIGURE_WITH="--with-contrib" 
+    - env: CONFIGURE_WITH="--enable-contrib" 
 env:
   - CONFIGURE_WITH=""
   - CONFIGURE_WITH="--with-perl"
-  - CONFIGURE_WITH="--enable-contrib" 
-  - CONFIGURE_WITH="--enable-ssl"
-  - CONFIGURE_WITH="--disable-nls"
+  - CONFIGURE_WITH="--enable-contrib"
 before_install:
   - git clone https://github.com/atheme/libmowgli-2 && cd libmowgli-2 && ./configure && make && sudo make install && cd ..
 install:
