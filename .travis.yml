@@ -1,5 +1,5 @@
 language: c 
-script: ./configure
+script: ./configure --prefix=/home/travis/shalture && make
 compiler:
   - gcc
   - clang 
