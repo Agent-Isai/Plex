@@ -1,5 +1,5 @@
 language: c 
-script: ./configure --prefix=/home/travis/shalture && make
+script: ./configure --prefix=/home/travis/shalture && make && make install
 compiler:
   - gcc
   - clang 
@@ -12,7 +12,7 @@ env:
   - CONFIGURE_WITH="--with-perl"
   - CONFIGURE_WITH="--enable-contrib" 
 before_install:
-  - git clone https://github.com/atheme/libmowgli-2 && cd libmowgli-2 && ./configure && make && sudo make install && cd
+  - git clone https://github.com/atheme/libmowgli-2 && cd libmowgli-2 && ./configure && make && sudo make install && cd Agent-Isai/Plex
 install:
   - sudo apt-get update -qq
   - sudo apt-get install -q -y libperl-dev
