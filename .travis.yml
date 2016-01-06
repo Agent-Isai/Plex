@@ -12,7 +12,7 @@ env:
   - CONFIGURE_WITH="--with-perl"
   - CONFIGURE_WITH="--enable-contrib" 
 before_install:
-  - git clone https://github.com/atheme/libmowgli-2 && cd libmowgli-2 && ./configure && make && sudo make install && cd ~/Agent-Isai/Plex
+  - git clone https://github.com/atheme/libmowgli-2 && cd libmowgli-2 && ./configure && make && sudo make install && cd ..
 install:
   - sudo apt-get update -qq
   - sudo apt-get install -q -y libperl-dev
