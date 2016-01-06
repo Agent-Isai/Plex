@@ -1,5 +1,5 @@
 language: c 
-script: ./configure --disable-nls --enable-ssl && make && make install 
+script: ./configure
 compiler:
   - gcc
   - clang 
