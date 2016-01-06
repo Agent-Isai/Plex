@@ -1,5 +1,5 @@
 language: c 
-script: ./configure --disable-nls --enable-ssl && make -j $(nproc) 
+script: ./configure --disable-nls --enable-ssl && make && make install 
 compiler:
   - gcc
   - clang 
