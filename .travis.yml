@@ -1,5 +1,5 @@
 language: c 
-script: ./configure --prefix=/home/travis/shalture --disbale-nls --enable-ssl $CONFIGURE_WITH && make && make install
+script: ./configure --prefix=/home/travis/shalture --disable-nls --enable-ssl $CONFIGURE_WITH && make && make install
 compiler:
   - gcc
   - clang 
